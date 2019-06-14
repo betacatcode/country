@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<!-- stylesheet -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/styleIndex.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //stylesheet -->
+<!-- online fonts -->
+<link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- //online fonts -->
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" type="text/css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+</head>
+<body>
+<div class="agileits_main">
+<!-- header -->
+<div class="w3_agile_logo">
+	<h1 class="text-center"><a href="index.html">logo</a></h1>
+</div>
+<!-- banner -->
+<div class="w3_banner">
+	<div class="container">
+		<div class="slider">
+			<div class="callbacks_container">
+			   <ul class="rslides callbacks callbacks1" id="slider4">
+					<li>	
+						<div class="banner_text_w3layouts">
+							<input name="country" type="text" value="请输入地名" onfocus="if (value =='请输入地名'){value='';}" onblur="if (value  ==''){value='请输入地名';}" style="width:500px;height:30px;">
+							<input type="submit" value="搜索" style="width:100px;height:30px;"><br>
+							<span> </span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		  <script src="js/responsiveslides.min.js"></script>
+		  <script>
+			// You can also use "$(window).load(function() {"
+			$(function () {
+			  // Slideshow 4
+			  $("#slider4").responsiveSlides({
+				auto: true,
+				pager:true,
+				nav:true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+				  $('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+				  $('.events').append("<li>after event fired.</li>");
+				}
+			  });
+		
+			});
+		 </script>
+	   </div>
+	</div>   
+</div>
+<!-- menu -->
+<nav class="navbar navbar-inverse ">
+	<div class="container">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+		</button>
+	<div class="collapse navbar-collapse top-nav w3l" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav linkEffects linkHoverEffect_11 custom-menu">
+			<li class="agile_active"><a href="index.html" class="scroll"><span>首页</span></a></li>
+			<li class="dropdown"><a href="#" data-toggle="dropdown">乡村</a>
+				<ul class="dropdown-menu right" role="menu">
+					<li><a href="#">风景</a></li>
+					<li><a href="#">特产</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="scroll"><span>乡土教育</span></a></li>
+			<!--<li><a href="#" class="scroll"><span>杰出人物</span></a></li>-->
+			<li><a href="#" class="scroll"><span>钟灵毓秀</span></a></li>
+			<li><a href="#" class="scroll"><span>为你推荐</span></a></li>
+			<li><a href="#" class="scroll"><span>讨论</span></a></li>
+			<li><a th:href="@{/login}" class="scroll"><span>登录/注册</span></a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+<!-- //menu -->
+  </div>	
+<!-- //banner -->	
+<!-- home -->
+<div class="home_ w3layouts">
+ <div class="home_grids_w3">
+  <div class="home_main">
+	   <div class="col-md-7 col-sm-7 col-xs-7 img1 img-grid">
+		   <div class="img_text_w3ls text-center">
+				<h4>风景</h4>
+				<span> </span>
+				<p>春雪满空来，触处似花开。</p>
+			</div>
+		</div>
+		<div class="col-md-5 img2 col-sm-5 col-xs-5 img-grid">
+		    <div class="img_text_w3ls text-center">
+				<h4>特产</h4>
+				<span> </span>
+				<p>美食理应君皆尝，定可远运至异乡。</p>
+			  </div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+  <div class="home_main">
+	   <div class="col-md-5 col-sm-5 col-xs-5 img3 img-grid ">
+		    <div class="img_text_w3ls text-center">
+				<h4>杰出人物</h4>
+				<span> </span>
+				<p>江山代有才人出,各领风骚数百年。</p>
+			  </div>
+		</div>
+	  <div class="col-md-7 col-sm-7 col-xs-7 img4 img-grid">
+		    <div class="img_text_w3ls text-center">
+				<h4>钟灵毓秀</h4>
+				<span> </span>
+				<p>一方水土养一方人，一方文化熏陶一方人。</p>
+			</div>
+	 </div>
+	<div class="clearfix"></div>
+  </div>
+</div>
+</div>
+<!-- //home -->
+<!-- about -->
+<!-- <div class="about_agileinfo" id="about">
+  <div class="container">
+      <h3 class="title">为你推荐</h3>
+	  <div class="about_main">
+		  <div class="col-md-6 col-sm-6 col-xs-6 about_agileits"></div>
+		  <div class="col-md-6 col-sm-6 col-xs-6 about_text_w3l">
+		    <h4>乡土文化--浙江</h4>
+			<P>乡土文化在我国历史悠久，源远流长，内涵丰富。一方水土养育一方人，一方文化熏陶一方人。“义利并重、工商皆本”是浙江的“乡土文化基因”，让浙江人传承了敢为人先、勇立潮头的创业创新精神。改革开放以来，浙江的快速发展，特别是民营经济的发展，应该说得益于浙江大地有着深厚的乡土文化底蕴，孕育出浙江文化，形成浙江精神。比如,“说尽千言万语、走遍千山万水、历经千难万险、吃尽千辛万苦”的“四千四万”精神。这种精神植根于浙江大地、源自于历史传承、立足于群众自发、契合于时代特征；正是浙江人民在长期的乡村劳作和生产中积累和孕育出来的优秀乡土文化的生动体现，一直激励着浙江人民不断创业创新发展。
+			</P>
+		  </div>
+		  <div class="clearfix"></div>
+	  </div>	  
+  </div>
+ </div>  -->
+<!-- //about -->
+<!-- gallery -->
+<div class="gallery_wthree" id="gallery">
+ <div class="container">
+      <h3 class="title">为你推荐</h3>
+	  <div class="gallery_grid agileits_w3layouts">
+	    <div class="col-md-6  col-sm-6 col-xs-6 grid_w3">
+			<div class="grid-1">
+				<a class="cm-overlay" href="images/culture5.gif">
+					<img src="images/culture5.gif" alt=" " class="img-responsive" />
+					 <div class="w3agile-text w3agile-text-smal1">
+					 	<h5>乡土文化--浙江</h5>
+					</div>
+				</a>
+			</div>
+			 <div class="sub_grid gallery_w3l">
+				   <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
+						<a class="cm-overlay" href="images/food3.jpg">
+							<img src="images/food3.jpg" alt=" " class="img-responsive" />
+							<div class="w3agile-text w3agile-text-small">
+								<h5 style="padding: 1em 0em 0em 0em;">美味佳肴--嘉兴粽子</h5>
+								<h5 style="text-align:left; text-indent:2em;">嘉兴粽子是浙江嘉兴特色传统名点。以糯而不糊，肥而不腻，香糯可口，咸甜适中而著称。尤以鲜肉粽最为出名，被誉为“粽子之王”。嘉兴粽子因其滋味鲜美，携带、食用方便而备受广大旅游者厚爱，有“东方快餐”之称。
+								</h5>
+					        </div>
+						</a>
+					</div>
+				   <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-b grid_w3l">
+					 	<a class="cm-overlay" href="images/food4.jpg">
+							<img src="images/food4.jpg" alt=" " class="img-responsive" />
+							<div class="w3agile-text w3agile-text-smal1">
+								<h5 style="padding: 1em 0em 0em 0em;">美味佳肴--绍兴臭豆腐</h5>
+								<h5 style="text-align:left; text-indent:2em;">绍兴臭豆腐是有着丰富文化底蕴的浙江绍兴汉族民间休闲小吃，属于浙菜系。距今已有近千年的历史，其最风光的时代可追溯到清康熙年间，康熙皇帝一日在吃了王致和臭豆腐后豪情大发，挥笔题下“青方”二 字，使得臭豆腐立即名扬天下，据历史考证慈禧太后也有吃臭豆腐的嗜好，还将其列为御膳小菜。 </h5>
+							</div>
+						</a>
+					</div>
+				   <div class="clearfix"></div>
+			 </div>  
+        </div>
+		<div class="col-md-6 col-sm-6 col-xs-6 grid_w3">
+		   <div class="sub_grid">
+			   <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
+          			<a class="cm-overlay" href="images/syf1.jpg">
+						<img src="images/syf1.jpg" alt=" " class="img-responsive"/>
+						<div class="w3agile-text w3agile-text-small">
+							<h5 style="text-align:left;text-indent:2em;">邵逸夫（1907年11月19日—2014年1月7日），原名邵仁楞，生于浙江宁波镇海。香港电视广播有限公司（TVB）荣誉主席，邵氏兄弟电影公司的创办人之一。电影制作人、娱乐业大亨、慈善家。
+							邵逸夫在1958年于香港成立邵氏兄弟电影公司，拍摄过逾千部华语电影，另外他旗下的电视广播有限公司（TVB，惯称无线电视）主导着香港的电视行业。
+							</h5>
+						</div>
+					</a>
+			   </div>
+			   <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-d grid_w3l">
+					<a class="cm-overlay" href="images/zaz.jpg">
+						<img src="images/zaz.jpg" alt=" " class="img-responsive" />
+						<div class="w3agile-text w3agile-text-smal1" >
+							<h5 style="text-align:left;text-indent:2em;">赵安中，1918年出生于宁波市镇海区骆驼镇，曾任香港荣华纺织有限公司董事长、宁波旅港同乡会名誉会长、香港甬港联谊会名誉会长，苏浙同乡会赞助人。赵安中十分关心家乡教育卫生事业，已捐助百余个项目，而且特别关心贫困山区、老区、海岛的基础教育事业，经常不辞劳苦亲自上高山、下海岛察看实情，确定捐赠项目，几乎在全市所有的贫困乡（镇）都捐建了以林杏琴命名的教学楼。</h5>
+						</div>
+					</a>
+				</div>
+				 <div class="clearfix"></div>
+			   </div>
+		    <div class="grid-1 grid-2">
+				<a class="cm-overlay" href="images/view6.gif">
+					<img src="images/view6.gif" alt=" " class="img-responsive" />
+					<div class="w3agile-text w3agile-text-smal1">
+							<h5>青山绿水--浙江</h5>
+					</div>
+				</a>
+		    </div>
+		   <div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	  </div>	
+</div>
+</div>
+<!-- //gallery -->
+<!-- copy-right -->
+<div class="copy-right agileits-w3layouts">
+	<div class="container">
+		<div class="social-icons agileits">
+     		<ul>
+				<li><a href="#" class="fa fa-facebook icon icon-border facebook"> </a></li>
+				<li><a href="#" class="fa fa-twitter icon icon-border twitter"> </a></li>
+				<li><a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a></li>
+				<li><a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a></li>
+			</ul>
+			<div class="clearfix"> </div>
+		</div> 
+		<p>Copyright &copy; 2017.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>	
+	</div>
+</div>
+<!-- //copy-right -->
+<!-- Gallery-plugin -->
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/jquery.cm-overlay.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.cm-overlay').cmOverlay();
+			});
+		</script>
+<!-- //Gallery-plugin -->
+<!-- start-smooth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+		
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<script src="js/SmoothScroll.min.js"></script>
+<!-- //end-smooth-scrolling -->	
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+		};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
