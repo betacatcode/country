@@ -4,6 +4,8 @@ package com.lab.country.bean;
  * @author ruin
  * @date 2019/5/24-20:40
  */
+
+//更新测试
 public class User {
 
     private Integer id;
